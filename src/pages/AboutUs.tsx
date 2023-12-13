@@ -1,7 +1,7 @@
 function AboutUs() {
     return (
         <div className="bg-sky-700">
-            About Us
+            i am
         </div>
     )
 }

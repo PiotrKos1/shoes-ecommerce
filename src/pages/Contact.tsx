@@ -1,7 +1,7 @@
 function Contact() {
     return (
         <div className="bg-orange-300">
-            Contact
+            email
         </div>
     )
 }
