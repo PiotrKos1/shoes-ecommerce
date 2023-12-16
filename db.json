@@ -1,0 +1,21 @@
+{
+    "shop": {
+    "products": [
+        {
+            "name": "adasda",
+            "id": 1
+        },
+        {
+            "name": "ada3443sda",
+            "id": 2
+        },
+        {
+            "name": "aasdasda",
+            "id": 3
+        }
+    ],
+    "shoppingCart": [
+
+    ]
+    }
+}
