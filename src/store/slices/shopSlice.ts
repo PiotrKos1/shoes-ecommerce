@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchShop } from '../store'
+import { Data } from "../../Data";
+
 
 interface shopState {
-  data: string[],
+  data: Data[],
   isLoading: boolean,
   error: string | null
 }
