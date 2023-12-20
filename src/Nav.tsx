@@ -1,7 +1,30 @@
+import { useState, useRef, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { GoKebabHorizontal, GoInbox } from "react-icons/go";
 
+
 function Nav() {
+  const [showNav, setShowNav] = useState<boolean>(false)
+  const menuRef = useRef<HTMLElement>(null)
+
+  useEffect(()=>{
+    const handleShowNav = (e: any) => {
+      if(!menuRef.current?.contains(e.target))
+   { setShowNav(false)}
+  
+    };
+
+    document.addEventListener("mousedown", handleShowNav);
+
+    return() => {
+      document.removeEventListener("mousedown", handleShowNav)
+    }
+
+  })
+
+  
+
+  
 
 
 
@@ -26,13 +49,14 @@ function Nav() {
             <p className="text-xs">3</p>
             </div>
       </nav>
-      <nav className="relative md:hidden h-10 flex justify-end bg-third-color text-text-color">
-          <button className="pr-12"><GoKebabHorizontal /></button>
+      <nav ref={menuRef} className="relative md:hidden h-10 flex justify-end bg-third-color text-text-color">
+          <button onClick={()=>setShowNav(!showNav)}
+           className="pr-12"><GoKebabHorizontal /></button>
         <div className="flex">
           <button className="pointer text-main-color"><a><GoInbox /></a></button>
           <p className="text-main-color text-xs">3</p>
         </div>
-        <ul className="hidden absolute top-10 right-0 pr-8">
+        {showNav ? <ul  className="absolute top-10 right-0 pr-8">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -45,10 +69,8 @@ function Nav() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-        </ul>
-        {/* <div className="flex"><button className="pointer"><a><GoInbox className="text-xl"/></a></button>
-            <div className="text-xs">3</div>
-            </div> */}
+        </ul> : showNav }
+        
       </nav>
 
       <Outlet />

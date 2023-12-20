@@ -10,17 +10,17 @@ function Home() {
       <div className='flex items-center justify-center h-screen bg-zinc-700/[0.85]'>
         {/* <div className='flex justify-center'> */}
           <div className='flex flex-col items-center'>
-            <div className="text-center pb-40">
-            <p className='text-third-color uppercase text-2xl font-bold'>
+            <div className="text-center pb-40 text-third-color uppercase">
+            <p className="text-2xl md:text-4xl font-bold">
               komfort.
             </p>
-            <p className='text-third-color uppercase text-2xl font-bold'>
+            <p className="text-2xl md:text-4xl font-bold">
               wygoda.
             </p>
-            <p className='text-third-color uppercase text-2xl font-bold'>
+            <p className="text-2xl md:text-4xl font-bold">
               lepsze wyniki.
             </p>
-            <p className='text-third-color uppercase text-l'>
+            <p className='text-l md:text-xl'>
               *Rozpocznij zakupy i zyskaj nawet do 20% zniżki
             </p>
             
