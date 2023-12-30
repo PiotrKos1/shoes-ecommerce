@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { GoKebabHorizontal, GoInbox } from "react-icons/go";
+import { BsCart } from "react-icons/bs";
 
 
 function Nav() {
@@ -45,7 +46,7 @@ function Nav() {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-            <div className="flex justify-end pl-60"><button className="pointer"><a><GoInbox className="text-xl"/></a></button>
+            <div className="flex justify-end pl-60"><button className="pointer text-xl"><Link to="/shopping-cart"><BsCart /></Link></button>
             <p className="text-xs">3</p>
             </div>
       </nav>
@@ -53,7 +54,7 @@ function Nav() {
           <button onClick={()=>setShowNav(!showNav)}
            className="pr-12"><GoKebabHorizontal /></button>
         <div className="flex">
-          <button className="pointer text-main-color"><a><GoInbox /></a></button>
+          <button className="pointer text-main-color"><Link to="/shopping-cart"><BsCart /></Link></button>
           <p className="text-main-color text-xs">3</p>
         </div>
         {showNav ? <ul  className="absolute top-10 right-0 pr-8">

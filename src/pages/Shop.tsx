@@ -14,7 +14,6 @@ function Shop() {
     return state.shop;
   });
 
-  console.log(data)
 
   useEffect(() => {
     setIsLoadingProducts(true)
@@ -34,7 +33,7 @@ function Shop() {
     content = <Products data={data} />
   }
 
-  return (<div className='bg-lime-500'>
+  return (<div className="flex justify-center">
     {content}
     </div>
     )

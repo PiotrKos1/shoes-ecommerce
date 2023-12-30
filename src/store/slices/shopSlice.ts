@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchShop } from '../store'
+import { fetchShop, fetchShoppingCart } from '../store'
 import { Data } from "../../Data";
 
 
@@ -32,6 +32,18 @@ export const shopSlice = createSlice({
         state.isLoading = false
         state.error = null
     });
+    builder.addCase(fetchShoppingCart.pending, (state, action) => {
+      state.isLoading = true;
+  });
+    builder.addCase(fetchShoppingCart.fulfilled, (state, action) => {
+    state.isLoading = false
+    state.data = action.payload
+});
+    builder.addCase(fetchShoppingCart.rejected, (state, action) => {
+    state.isLoading = false
+    state.error = null
+});
+
 
     }
   })

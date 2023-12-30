@@ -9,7 +9,7 @@ interface Props {
 const Products = ({data}: Props) => {
     const renderedProducts = data.map((product) => { return <ProductElement key={product.id} product={product} /> })
     return (
-        <div>
+        <div className="flex flex-wrap w-3/4 pt-32">
             {renderedProducts}
     
         </div>
