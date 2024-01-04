@@ -63,13 +63,6 @@
   ],
   "shoppingCart": [
     {
-      "id": 1,
-      "name": "prodcutName",
-      "price": "productPrice",
-      "img": "productImg",
-      "productId": 3
-    },
-    {
       "name": "Nike Runner XBHC00",
       "price": 249.99,
       "img": "/images/shoe2.jpg",
@@ -96,6 +89,29 @@
       "img": "/images/shoe3.jpg",
       "productId": 5,
       "id": 5
+    },
+    {
+      "name": "Nike Runner XBHC00",
+      "price": 249.99,
+      "img": "/images/shoe2.jpg",
+      "productId": 2,
+      "id": 6
+    },
+    {
+      "name": "Nike Runner XBHC00",
+      "price": 249.99,
+      "img": "/images/shoe2.jpg",
+      "productId": 2,
+      "selectedSize": "41",
+      "id": 7
+    },
+    {
+      "name": "Nike 9389839",
+      "price": 199.99,
+      "img": "/images/shoe4.jpg",
+      "productId": 6,
+      "selectedSize": "45",
+      "id": 8
     }
   ]
 }

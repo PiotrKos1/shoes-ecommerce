@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Data } from "../Data";
 import { addToShoppingCart } from "../thunks/addToShoppingCart";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
@@ -7,17 +8,14 @@ interface ProductProps {
 }
 
 
-
 function ProductElement({ product }: ProductProps) {
+  const [selectedSize, setSelectedSize] = useState<string>('')
   const dispatch = useAppDispatch();
-  const { data, isLoading, error } = useAppSelector(state => {
-    return state.shop;
-  });
 
- 
+  console.log(selectedSize)
 
   const handleClick = () => {
-    dispatch(addToShoppingCart({product}))
+    dispatch(addToShoppingCart({product, selectedSize}))
   };
 
   return (
@@ -29,7 +27,10 @@ function ProductElement({ product }: ProductProps) {
       </div>
       <div className='flex justify-around'>
         <p>Choose size:</p>
-        <select>
+        
+        <label>
+        <select value={selectedSize} onChange={(e)=>setSelectedSize(e.target.value)} className="w-20" name="selectedSize" defaultValue="defaultValue">
+        <option value='defaultValue'></option>
           <option value='40'>40</option>
           <option value='41'>41</option>
           <option value='42'>42</option>
@@ -37,12 +38,14 @@ function ProductElement({ product }: ProductProps) {
           <option value='44'>44</option>
           <option value='45'>45</option>
         </select>
+        </label>
       </div>
       <button
         onClick={handleClick}
         className='h-8 bg-text-color text-third-color w-full uppercase font-bold'>
         add
       </button>
+      
     </div>
   );
 }
