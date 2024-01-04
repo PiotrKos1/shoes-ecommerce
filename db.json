@@ -70,47 +70,32 @@
       "productId": 3
     },
     {
+      "name": "Nike Runner XBHC00",
+      "price": 249.99,
+      "img": "/images/shoe2.jpg",
+      "productId": 2,
       "id": 2
     },
     {
+      "name": "Bugatti Sport 00999",
+      "price": 549.99,
+      "img": "/images/shoe9.jpg",
+      "productId": 3,
       "id": 3
     },
     {
+      "name": "Nike 878787",
+      "price": 299.99,
+      "img": "/images/shoe3.jpg",
+      "productId": 5,
       "id": 4
     },
     {
+      "name": "Nike 878787",
+      "price": 299.99,
+      "img": "/images/shoe3.jpg",
+      "productId": 5,
       "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "name": "hej",
-      "id": 7
-    },
-    {
-      "name": "hej",
-      "id": 8
-    },
-    {
-      "name": "hej",
-      "id": 9
-    },
-    {
-      "name": "hej",
-      "id": 10
-    },
-    {
-      "name": "hej",
-      "id": 11
-    },
-    {
-      "name": "Bugatti Sport 00999",
-      "id": 12
-    },
-    {
-      "name": "Asics-0H87438X",
-      "id": 13
     }
   ]
 }
